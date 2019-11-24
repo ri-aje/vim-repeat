@@ -139,8 +139,8 @@ function! repeat#wrap(command,count)
 endfunction
 
 nnoremap <silent> <Plug>(RepeatDot)      :<C-U>exe repeat#run(v:count)<CR>
-nnoremap <silent> <Plug>(RepeatUndo)     :<C-U>call repeat#wrap('l',v:count)<CR>
-nnoremap <silent> <Plug>(RepeatUndoLine) :<C-U>call repeat#wrap('L',v:count)<CR>
+nnoremap <silent> <Plug>(RepeatUndo)     :<C-U>call repeat#wrap('u',v:count)<CR>
+nnoremap <silent> <Plug>(RepeatUndoLine) :<C-U>call repeat#wrap('U',v:count)<CR>
 nnoremap <silent> <Plug>(RepeatRedo)     :<C-U>call repeat#wrap("\<Lt>C-R>",v:count)<CR>
 
 if !hasmapto('<Plug>(RepeatDot)', 'n')
